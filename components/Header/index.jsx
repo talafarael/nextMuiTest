@@ -18,13 +18,13 @@ const Header = () => {
 	return (
 		
 			<Box >
-				<AppBar position='static' sx={{display: 'flex' ,flexDirection:'row',background:'none',   justifyContent:'space-between',}}>
+				<AppBar position='static' sx={{height:'12vh', display: 'flex' ,flexDirection:'row',background:'none',   justifyContent:'space-between',}}>
 					<Toolbar >
 						
 					</Toolbar>
 
-					<Box >
-					<Button color="inherit">  <IconButton
+					<Box  sx={{height:'10vh', display:"flex"}} >
+					<Button  color="inherit">  <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"

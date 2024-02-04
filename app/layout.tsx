@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; 
+
+
 import { Header } from "@/components/Header";
-import { Grid } from "@mui/material";
+import { Grid} from "@mui/material";
 import { Height } from "@mui/icons-material";
+import MenuLi from "@/components/Menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +27,14 @@ export default function RootLayout({
         
          
          <Grid container spacing={2} >
-  <Grid item xs={11}  >
+  <Grid item xs={11}  style={{height:'12vh'}} >
   <Header />
   </Grid>
   <Grid item xs={1} >
   xs=play
   </Grid>
   <Grid item xs={2}  >
-  
+    <MenuLi></MenuLi>
   </Grid>
   <Grid item xs={9} sx={{background:'red'}} >
     <div style={{height:'85vh'}}>
