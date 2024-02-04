@@ -1,36 +1,56 @@
-
 "use client"
-import React from "react"
-import {AppBar, Toolbar, IconButton, Button, Box } from "@mui/material"
-import MenuIcon from '@mui/icons-material/Menu';
-import { purple, red } from '@mui/material/colors';
-    const primary = red[500];
-const Header=()=>{
-    function handleClick() {
+
+import * as React from "react"
+import {AppBar, Toolbar, IconButton, Button, Box} from "@mui/material"
+import {createTheme, ThemeProvider} from "@mui/material/styles"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemButton from "@mui/material/ListItemButton"
+import ListItemText from "@mui/material/ListItemText"
+import MenuIcon from "@mui/icons-material/Menu"
+import {purple, lime} from "@mui/material/colors"
+const navItems = ["Home", "About", "Contact"]
+const theme = createTheme({
+	palette: {
+		primary: lime,
+		secondary: purple,
+	},
+})
+
+const Header = () => {
+	function handleClick() {
 		console.log("fafaf")
 	}
 
-    return(
-    <Box  color="primary">
-        <AppBar position='static' color={red}>
-            <Toolbar>
-                <IconButton
-                    size='large'
-                    edge='start'
-                    color=''
-                    aria-label='menu'
-                    sx={{mr: 2}}
-                >
-                    {/* Your IconButton content goes here */}
-                </IconButton>
+	return (
+		
+			<Box sx={{ display: 'flex' , flex_direction:'row,'}}>
+				<AppBar position='static'sx={{background:'purple'}}>
+					<Toolbar >
+						<Button
+							variant='contained'
+							onClick={handleClick}
+							color='secondary'
+						>
+							<MenuIcon />
+						</Button>
+					</Toolbar>
 
-                <Button variant="contained" onClick={handleClick}>
-                <MenuIcon/>
-                </Button>
-            </Toolbar>
-        </AppBar>
-    </Box>
-    )
+					<Box sx={{ flexGrow: 0 ,display:'flex', background:'red'}}>
+						<List>
+							{navItems.map((item) => (
+								<ListItem key={item} disablePadding>
+									<ListItemButton sx={{textAlign: "center"}}>
+										<ListItemText primary={item} />
+									</ListItemButton>
+								</ListItem>
+							))}
+						</List>
+					</Box>
+				</AppBar>
+			</Box>
+	
+	)
 }
 
 export {Header}
