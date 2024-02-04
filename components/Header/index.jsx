@@ -23,8 +23,8 @@ const Header = () => {
 						
 					</Toolbar>
 
-					<Box  sx={{height:'10vh', display:"flex"}} >
-					<Button  color="inherit">  <IconButton
+					<Box  sx={{height:'12vh', display:"flex"}} >
+					<Button   color="inherit">  <IconButton 
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -32,7 +32,7 @@ const Header = () => {
                 
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle sx={{  height:'10vh', width:'50px'}}  />
 
 					
 					</IconButton>

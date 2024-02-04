@@ -27,7 +27,7 @@ export default function RootLayout({
         
          
          <Grid container spacing={2} >
-  <Grid item xs={11}  style={{height:'12vh'}} >
+  <Grid item xs={11}  style={{height:'15vh'}} >
   <Header />
   </Grid>
   <Grid item xs={1} >
@@ -36,8 +36,8 @@ export default function RootLayout({
   <Grid item xs={2}  >
     <MenuLi></MenuLi>
   </Grid>
-  <Grid item xs={9} sx={{background:'red'}} >
-    <div style={{height:'85vh'}}>
+  <Grid item xs={9}  >
+    <div style={{height:'82vh'}}>
     {children}
     </div>
    xs=2
