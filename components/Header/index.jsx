@@ -9,43 +9,34 @@ import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
 import MenuIcon from "@mui/icons-material/Menu"
 import {purple, lime} from "@mui/material/colors"
-const navItems = ["Home", "About", "Contact"]
-const theme = createTheme({
-	palette: {
-		primary: lime,
-		secondary: purple,
-	},
-})
+import { AccountCircle } from "@mui/icons-material"
+
 
 const Header = () => {
-	function handleClick() {
-		console.log("fafaf")
-	}
+	
 
 	return (
 		
-			<Box sx={{ display: 'flex' , flex_direction:'row,'}}>
-				<AppBar position='static'sx={{background:'purple'}}>
+			<Box >
+				<AppBar position='static' sx={{display: 'flex' ,flexDirection:'row',background:'none',   justifyContent:'space-between',}}>
 					<Toolbar >
-						<Button
-							variant='contained'
-							onClick={handleClick}
-							color='secondary'
-						>
-							<MenuIcon />
-						</Button>
+						
 					</Toolbar>
 
-					<Box sx={{ flexGrow: 0 ,display:'flex', background:'red'}}>
-						<List>
-							{navItems.map((item) => (
-								<ListItem key={item} disablePadding>
-									<ListItemButton sx={{textAlign: "center"}}>
-										<ListItemText primary={item} />
-									</ListItemButton>
-								</ListItem>
-							))}
-						</List>
+					<Box >
+					<Button color="inherit">  <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                
+                color="inherit"
+              >
+                <AccountCircle />
+
+					
+					</IconButton>
+					</Button>
 					</Box>
 				</AppBar>
 			</Box>
